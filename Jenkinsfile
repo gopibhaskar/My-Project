@@ -77,9 +77,12 @@ node{
     { 
 		try
 		{
-      			sh """cd collaborationBackEnd; mvn clean compile package"""
-      			sh """cd ../collaborationControllers"""
-      			sh """mvn clean compile package test"""
+      			workspace = pwd ()
+			sh """echo $workspace"""
+			sh """cd collaborationBackEnd; mvn clean compile package"""
+			sh """echo $workspace"""
+      			sh """cd collaborationControllers; mvn clean compile package test"""  
+			sh """echo $workspace"""
       
 		}
 		catch (e) 
