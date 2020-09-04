@@ -77,8 +77,7 @@ node{
     { 
 		try
 		{
-      			sh """cd collaborationBackEnd"""
-			sh """mvn clean compile package"""
+      			sh """cd collaborationBackEnd \ mvn clean compile package"""
       			sh """cd ../collaborationControllers"""
       			sh """mvn clean compile package test"""
       
