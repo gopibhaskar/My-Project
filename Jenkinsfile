@@ -77,10 +77,10 @@ node{
     { 
 		try
 		{
-      sh """cd collaborationBackEnd"
+      			sh """cd collaborationBackEnd"""
 			sh """mvn clean compile package"""
-      sh ""cd ../collaborationControllers""
-      sh """mvn clean compile package test"""
+      			sh """cd ../collaborationControllers"""
+      			sh """mvn clean compile package test"""
       
 		}
 		catch (e) 
